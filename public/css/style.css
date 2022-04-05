@@ -1,0 +1,19 @@
+.label-filter{
+    width: 70px !important;
+}
+
+.btn-filter{
+    width: 70px !important;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.btn-edit:hover{
+    color: #0d6efd;
+}
+
+.btn-delete:hover{
+    color: #dc3545;
+}

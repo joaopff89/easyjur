@@ -1,6 +1,6 @@
 # Objetivos
 
-- Esta aplicação visa disponibilizar um website onde os usuários possam fazer o cadastro/login e inserir dicas específicas de veículos por tipo (Moto, Carro ou Caminhão) e incluir marca, modelo e versão. Informar a versão do veículo é **opcional**.
+- Esta aplicação visa disponibilizar um website com interface simples onde os usuários possam fazer o cadastro/login e inserir dicas específicas de veículos por tipo (Moto, Carro ou Caminhão) e incluir marca, modelo e versão. Informar a versão do veículo é **opcional**.
 
 - Disponibilizar também uma api onde seja possível um usuário já cadastrado realizar as seguintes ações:
 	- Obter registros de dicas cadastradas.

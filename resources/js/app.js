@@ -40,7 +40,6 @@ Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
 Vue.component('dicas-index-component', require('./components/DicasIndex.vue').default);
 Vue.component('dicas-home-component', require('./components/DicasHome.vue').default);
-Vue.component('dica-create-component', require('./components/DicaCreate.vue').default);
 Vue.component('filter-component', require('./components/Filter.vue').default);
 Vue.component('table-component', require('./components/Table.vue').default);
 Vue.component('alert-component', require('./components/Alert.vue').default);

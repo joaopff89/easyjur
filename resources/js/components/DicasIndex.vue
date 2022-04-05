@@ -67,7 +67,7 @@
 
         data() {
             return {
-                urlBase: "http://localhost:8000/api/dica",
+                urlBase: "api/dica",
                 url: '',
                 tipo: '',
                 marca: '',

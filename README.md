@@ -1,64 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Objetivos
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- Esta aplicação visa disponibilizar um web site onde os usuários possam fazer o cadastro/login e inserir dicas específicas de veículos por tipo (Moto, Carro ou Caminhão) e incluir marca, modelo e versão. Informar a versão do veículo é **opcional**.
 
-## About Laravel
+- Disponibilizar também uma api onde seja possível um usuário já cadastrado realizar as seguintes ações:
+	- Obter registros de dicas cadastradas.
+	- Obter um registro de dica pelo Id.
+	- Realizar o registro de uma nova dica.
+	- Atualizar um registro de dica já cadastrada.
+	- Deletar um registro de dica cadastrada.
+<br/><br/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Telas
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Cadastro de usuário**
+- **Login**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- ** index** - será listado um grid com as dicas cadastradas com possibilidade de filtro por tipo, marca, modelo e versão. Trazendo as dicas de **todos os usuários**.
+- **home** - será listado um grid com as dicas cadastradas **pelo usuário logado** com possibilidade de filtro por tipo, marca, modelo e versão.  E os Botões para **criar, editar e excluir** uma dica.
+<br/><br/>
 
-## Learning Laravel
+#### API
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Foi Utilizado o Postman para documentar a api, e o json para recuperar a collection pode ser acessada através deste link -> **[collection](https://www.getpostman.com/collections/f12b34a5b5a5fd79aa09")**
+<br/><br/>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Considerações gerais
 
-## Laravel Sponsors
+Para o desenvolvimento do projeto foi utilizado como principais tecnologias:
+- PHP 7.4
+- Laravel 8.75
+- Vue.js 2.6.12
+- Bootstrap 5.1.3
+<br/><br/>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### O que foi feito
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- As tabelas do banco de dados foram definidas utilizando 'Migration'.
+- Utilizado 'seeders' para popular o banco de dados e 'Factory' para gerar os dados aleatoriamente.
+- Utilizado o conceito de 'Repository Pattern' para criar mais uma camada de abstração entre os 'controlers' e os 'Models', encapsulando toda a lógica de acesso a dados.
+- Utilizado o recurso 'Form Request Validation' do laravel que encapsula toda a lógica de validação e autorização de solicitações HTTP com formulários.
+- Utilizado o pacote 'tymon/jwt-auth' para fazer o gerenciamento de autenticação das APIs via Token.
+- Utilizado o pacote 'laravel/ui' para instalação das dependências vue e bootstrap para a construção do frontend.
